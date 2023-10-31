@@ -1,25 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <title>nativise.me</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nativise.me - Landing Page</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- This will link your CSS stylesheet for styling -->
 </head>
 <body>
-    <header>
-        <h1>Welcome to nativise.me</h1>
-    </header>
-    <section id="about">
-        <h2>About Us</h2>
-        <p>We specialize in...</p>
-    </section>
-    <section id="features">
-        <h2>Features</h2>
-        <p>Our platform offers...</p>
-    </section>
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Email us at: info@nativise.me</p>
-    </section>
+    <div class="container">
+        <!-- Logo -->
+        <h1 class="logo">nativise.me</h1>
+        
+        <!-- Tagline -->
+        <h2 class="tagline">Making new cities feel like HOME</h2>
+        
+        <!-- Email Collection -->
+        <div class="email-collection">
+            <input type="email" placeholder="Enter your email" id="emailInput">
+            <button id="subscribeButton">Join Waitlist</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById('subscribeButton').addEventListener('click', function() {
+            const email = document.getElementById('emailInput').value;
+            if (email) {
+                alert(`Thank you, ${email}, for joining the waitlist!`);
+            } else {
+                alert('Please enter a valid email.');
+            }
+        });
+    </script>
     
 </body>
 </html>
